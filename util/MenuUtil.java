@@ -27,7 +27,7 @@ public class MenuUtil {
                 menuService.getSectionTwo(path);
                 menuList(path);
             } else if (selectedSection == 3) {
-                menuService.getSectionThree(path);
+                //empty
                 menuList(path);
             } else if (selectedSection == 4) {
                 menuService.getSectionFour(path);
