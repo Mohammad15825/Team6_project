@@ -73,28 +73,7 @@ public class MenuService implements MenuServiceInter {
         }
     }
 
-    @Override
-    public void getSectionThree(Path path) throws IOException {
-        try {
-            System.out.println(MenuUtil.getFieldNames());
-            int selectedField = InputUtil.requireNum("Select");
-            if (selectedField != 7) {
-                String inputValue = InputUtil.requireText("Enter value");
-                List<Products> products = productService.searchTheEntites(path, selectedField, inputValue);
-                products.forEach(System.out::println);
-            } else {
-                List<Products> products = productService.searchTheEntites(path, selectedField, null);
-                products.forEach(System.out::println);
-            }
-
-
-        } catch (InputMismatchException e) {
-            throw new InvalidInputException(ErrorCodeEnum.INVALID_INPUT);
-        } catch (NullPointerException n) {
-            throw new NotFoundException(ErrorCodeEnum.NOT_FOUND);
-        }
-    }
-
+  
     @Override
     public void getSectionFour(Path path) throws IOException {
         try {
