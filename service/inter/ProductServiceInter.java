@@ -18,7 +18,8 @@ public interface ProductServiceInter {
     List<Products> sortASC(Path path) throws IOException;
 
     List<Products> sortDESC(Path path) throws IOException;
-
+ 
+    List<Products> searchTheEntites(Path path, int selectedField, String inputValue) throws IOException;
 
     void columnNames(Path path);
 
